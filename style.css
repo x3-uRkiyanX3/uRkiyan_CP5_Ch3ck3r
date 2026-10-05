@@ -21,7 +21,8 @@ body{
     width: 300px;
     height: 250px;
     border: solid 4px #b7fff9;
-    transition: .4s;   
+    transition: .4s;
+    background-color: #ffffff;
 }
 
 
