@@ -1,5 +1,6 @@
 body{
     background-color: #1c1c1c;
+    overflow: hidden;
 }
 
 .main_content{
@@ -20,25 +21,13 @@ body{
     font-size: 50px;
     width: 300px;
     height: 250px;
-    border: solid 4px #b7fff9;
-    transition: .4s;
-    background-color: #ffffff;
+    outline: solid 4px #b7fff9;
+    transition: .4s;   
 }
 
 
 #CPS_check_button:hover{
     animation: 2s rainbow_text linear infinite;
-}
-
-@keyframes rainbow_text{
-    0%{color : #e60000}
-    14%{color: #f39800}
-    28%{color: #fff100}
-    42%{color: #009944}
-    56%{color: #0068b7}
-    70%{color: #1d2088}
-    85%{color: #b603a4}
-    100%{color: #e60000}
 }
 
 #CPS_check_button:active{
@@ -75,4 +64,42 @@ body{
     100%{
         transform: translateY(110vh) translateX(var(--sway)) rotate(var(--rotation));
     }
+}
+
+#CPS_check_DPGKCutscene1 {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    animation: 0.5s rainbow_border linear infinite;
+    z-index: -1;
+}
+
+@keyframes rainbow_border{
+    0%{background: radial-gradient(circle, transparent 20%, rgba(255, 0, 0, 0.05) 45%, rgba(255, 0, 0, 0.3) 100%)}
+    14%{background: radial-gradient(circle, transparent 20%, rgba(243, 152, 0, 0.05) 45%, rgba(243, 152, 0, 0.3) 100%)}
+    28%{background: radial-gradient(circle, transparent 20%, rgba(255, 241, 0, 0.05) 45%, rgba(255, 241, 0, 0.3) 100%)}
+    42%{background: radial-gradient(circle, transparent 20%, rgba(0, 153, 68, 0.05) 45%, rgba(0, 153, 68, 0.3) 100%)}
+    56%{background: radial-gradient(circle, transparent 20%, rgba(0, 104, 183, 0.05) 45%, rgba(0, 104, 183, 0.3) 100%)}
+    70%{background: radial-gradient(circle, transparent 20%, rgba(29, 32, 136, 0.05) 45%, rgba(29, 32, 136, 0.3) 100%)}
+    85%{background: radial-gradient(circle, transparent 20%, rgba(182, 3, 164, 0.05) 45%, rgba(182, 3, 164, 0.3) 100%)}
+    100%{background: radial-gradient(circle, transparent 20%, rgba(255, 0, 0, 0.05) 45%, rgba(255, 0, 0, 0.3) 100%)}
+}
+
+@keyframes border_size{
+    0%{color : #e60000}
+    14%{color: #f39800}
+    28%{color: #fff100}
+    42%{color: #009944}
+    56%{color: #0068b7}
+    70%{color: #1d2088}
+    85%{color: #b603a4}
+    100%{color: #e60000}
+    0%{outline: solid 4px #e60000;}
+    14%{outline: solid 8px #f39800;}
+    28%{outline: solid 16px #fff100;}
+    42%{outline: solid 32px #009944;}
+    56%{outline: solid 64px #0068b7;}
+    70%{outline: solid 32px #1d2088;}
+    85%{outline: solid 16px #b603a4;}
+    100%{outline: solid 8px #e60000;}
 }
