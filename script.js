@@ -30,6 +30,9 @@ function AddCPS(){
 
 function update_CPS(){
     const CPS_label = document.getElementById("CPS_check_totalcps");
+    const dpgkCutscene1 = document.getElementById("CPS_check_DPGKCutscene1")
+    const button = document.getElementById("CPS_check_button");
+
     now = performance.now();
 
     while (Click_times.length > 0 && now - Click_times[0] > 1000){
@@ -38,6 +41,17 @@ function update_CPS(){
 
     const  cps = (Click_times.length);
     CPS_label.textContent = `CPS: ${cps}`;
+    
+    if (cps >= 10){
+        dpgkCutscene1.hidden = false;
+        button.style.animation = "border_size 0.5s linear infinite";
+    }else if (cps <= 10){
+        dpgkCutscene1.hidden = true;
+        button.style.animation = "none";
+    }
+
+
+    
 }
 
 setInterval(update_CPS, 50);
